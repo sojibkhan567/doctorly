@@ -50,7 +50,7 @@
             @endif
         </header>
         <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
-            <h1>Hello World!</h1>
+            <h1>Hello World! oo</h1>
         </div>
 
         @if (Route::has('login'))
