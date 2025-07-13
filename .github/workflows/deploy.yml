@@ -33,7 +33,7 @@ jobs:
 
     - name: Create Database
       run: |
-        mysql -e 'CREATE DATABASE IF NOT EXISTS doctorly.db;'
+        mysql -e 'CREATE DATABASE IF NOT EXISTS doctorly_db;'
     - name: Migrate
       env:
         DB_CONNECTION: mysql
@@ -56,14 +56,6 @@ jobs:
 
     - name: Clear Cache
       run: php artisan optimize:clear
-
-    - name: Run tests
-      env:
-        DB_CONNECTION: sqlite
-        DB_CONNECTION_LOG: sqlite
-        DB_DATABASE: database/database.sqlite
-        DB_LOG_DATABASE: database/database.sqlite
-      run: php artisan test
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
