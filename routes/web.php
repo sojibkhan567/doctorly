@@ -12,3 +12,9 @@ Route::get('/admin/category/create', function() {
 Route::get('/admin/category/{id}', function(){
     return view('edit-category');
 });
+Route::get('/admin/post/create', function() {
+    return view('category');
+});
+Route::get('/admin/post/{id}', function(){
+    return view('edit-category');
+});

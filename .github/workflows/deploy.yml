@@ -24,6 +24,9 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
 
+    - name: Clear Cache
+      run: php artisan optimize:clear
+
     - name: Pre Deploy
       uses: appleboy/ssh-action@master
       with:
